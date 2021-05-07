@@ -1,10 +1,72 @@
 # index-coop Deployments
 
+This repository manages IndexCoop contract deployments using the [hardhat-deploy plugin][22].
+
+Each deployment is tracked and recorded by network in a [deployments/outputs][23] file.
+
+**All proposed deployments should:**
++ deploy to HardhatEVM
++ have unit tests which check the correctness of state variables set in the constructor
++ be deployed to Kovan and verified from the command line on `kovan.etherscan`
+
 ## Install
 ```
 cp .env.default .env
 yarn
 ```
+
+## Launch test client
+```
+yarn chain
+```
+
+## Test (deployment)
+```
+yarn clean-dev-deployment
+yarn deploy:local
+```
+
+## Test (unit)
+```
+yarn test
+```
+
+## Usage Guide
+
+To add a new deployment, create 3 files prefixed with the next deployment stage numeral.
+```sh
+# Example
+touch deploy/015_my_deployment_script.ts
+touch deployments/constants/015_my_deployment_script.ts
+touch test/deploys/015_my_deployment_script.ts
+```
+
+The simplest way to start is to find the *most recent* deployment script, constants and tests
+which are similar to the deployment you'd like to execute and copy/paste them for use as templates.
+
+**Example deployment to Kovan:**
+
+Fill in the following fields in your `.env` file:
+
++ `KOVAN_DEPLOY_PRIVATE_KEY`: An automated kovan faucet is on [gitter, here][24], or [myCrypto, here][27]
++ `INFURA_TOKEN`: An Infura projectID. Available with an account at [infura.io][25]
++ `ETHERSCAN_API_KEY`: Available with an account from [etherscan.io/api][26]
+
+[22]: https://github.com/wighawag/hardhat-deploy
+[23]: https://github.com/SetProtocol/index-deployments/tree/master/deployments/outputs
+[24]: https://gitter.im/kovan-testnet/faucet#
+[25]: https://infura.io/
+[26]: https://etherscan.io/apis
+[27]: https://app.mycrypto.com/faucet
+
+Run:
+```
+yarn deploy:kovan
+yarn etherscan:kovan
+```
+:tada: You're done!
+
+(If etherscan fails, see Etherscan section below).
 
 ## Etherscan verification
 
