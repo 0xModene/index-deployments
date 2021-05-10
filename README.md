@@ -33,7 +33,14 @@ yarn test
 
 ## Usage Guide
 
-To add a new deployment, create 3 files prefixed with the next deployment stage numeral.
+New deployments have two phases:
+
+1. PR for a deployment script with tests
+2. PR for an executed deployment
+
+### 1: Deployment scripts
+
+To add a new deployment script, create 3 files prefixed with the next deployment stage numeral.
 ```sh
 # Example
 touch deploy/015_my_deployment_script.ts
@@ -41,8 +48,9 @@ touch deployments/constants/015_my_deployment_script.ts
 touch test/deploys/015_my_deployment_script.ts
 ```
 
-The simplest way to start is to find the *most recent* deployment script, constants and tests
-which are similar to the deployment you'd like to execute and copy/paste them for use as templates.
+Then find the **most recent** deployment scripts and tests which are similar to the deployment you'd like to execute and copy/paste them for use as templates.
+
+**Pro Tip**: It's a good idea to deploy and verify new contracts on Kovan at this stage (in addition to locally) to catch any contract verification issues early in the process.
 
 **Example deployment to Kovan:**
 
@@ -52,21 +60,31 @@ Fill in the following fields in your `.env` file:
 + `INFURA_TOKEN`: An Infura projectID. Available with an account at [infura.io][25]
 + `ETHERSCAN_API_KEY`: Available with an account from [etherscan.io/api][26]
 
+**Run:**
+```
+yarn deploy:kovan
+yarn etherscan:kovan
+```
+
+(If etherscan fails, see Etherscan section below).
+
+
+### 2: Executing Deployments
+
+Checkout master and `git pull` the latest state. Then:
++ checkout a new branch to deploy on.
++ deploy/verify contracts on `staging_mainnet` and validate the contracts' read/write endpoints using Etherscan's contract UI.
++ deploy/verify contracts on `production`
++ commit and push the automated changes made to the `deployments/outputs/` logs to Github and open a PR
+with a description documenting the addresses of the new components.
+
+
 [22]: https://github.com/wighawag/hardhat-deploy
 [23]: https://github.com/SetProtocol/index-deployments/tree/master/deployments/outputs
 [24]: https://gitter.im/kovan-testnet/faucet#
 [25]: https://infura.io/
 [26]: https://etherscan.io/apis
 [27]: https://app.mycrypto.com/faucet
-
-Run:
-```
-yarn deploy:kovan
-yarn etherscan:kovan
-```
-:tada: You're done!
-
-(If etherscan fails, see Etherscan section below).
 
 ## Etherscan verification
 
