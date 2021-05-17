@@ -2,8 +2,6 @@
 
 This repository manages IndexCoop contract deployments using the [hardhat-deploy plugin][22].
 
-Each deployment is tracked and recorded by network in a [deployments/outputs][23] file.
-
 **All proposed deployments should:**
 + deploy to HardhatEVM
 + have unit tests which check the correctness of state variables set in the constructor
@@ -31,28 +29,7 @@ yarn deploy:local
 yarn test
 ```
 
-## Usage Guide
-
-New deployments have two phases:
-
-1. PR for a deployment script with tests
-2. PR for an executed deployment
-
-### 1: Deployment scripts
-
-To add a new deployment script, create 3 files prefixed with the next deployment stage numeral.
-```sh
-# Example
-touch deploy/015_my_deployment_script.ts
-touch deployments/constants/015_my_deployment_script.ts
-touch test/deploys/015_my_deployment_script.ts
-```
-
-Then find the **most recent** deployment scripts and tests which are similar to the deployment you'd like to execute and copy/paste them for use as templates.
-
-**Pro Tip**: It's a good idea to deploy and verify new contracts on Kovan at this stage (in addition to locally) to catch any contract verification issues early in the process.
-
-**Example deployment to Kovan:**
+## Testnet Deployment (Kovan)
 
 Fill in the following fields in your `.env` file:
 
@@ -66,7 +43,32 @@ yarn deploy:kovan
 yarn etherscan:kovan
 ```
 
-(If etherscan fails, see Etherscan section below).
+(If etherscan fails, see the [Etherscan](#etherscan-verification) section below).
+
+## Usage Guide
+
+New deployments have at least two (and sometimes 3) phases:
+
+1. PR for a deployment script with tests
+2. PR for an executed deployment (after `1` is approved & merged)
+
+### 1: Deployment scripts
+
+To add a new deployment script, create 3 files prefixed with the next deployment stage numeral.
+```sh
+# Example
+touch deploy/015_my_deployment_script.ts
+touch deployments/constants/015_my_deployment_script.ts
+touch test/deploys/015_my_deployment_script.ts
+```
+
+Then find the **most recent** deployment scripts and tests which are similar to the deployment you'd like to execute and copy/paste them for use as templates.
+
+**:bulb: Pro Tips :bulb:**:
+
++ Verify new contracts on Kovan to catch any contract verification issues early in the process.
++ Useful helpers can be found in [outputHelper.ts][30] and [deployUtils.ts][31]
++ Addresses for on-chain dependencies can be found in [dependencies.ts][32]
 
 
 ### 2: Executing Deployments
@@ -78,13 +80,17 @@ Checkout master and `git pull` the latest state. Then:
 + commit and push the automated changes made to the `deployments/outputs/` logs to Github and open a PR
 with a description documenting the addresses of the new components.
 
-
 [22]: https://github.com/wighawag/hardhat-deploy
 [23]: https://github.com/SetProtocol/index-deployments/tree/master/deployments/outputs
 [24]: https://gitter.im/kovan-testnet/faucet#
 [25]: https://infura.io/
 [26]: https://etherscan.io/apis
 [27]: https://app.mycrypto.com/faucet
+[28]: https://github.com/SetProtocol/set-v2-deployments/blob/325cb49034642767519f969046a3dc8e54b1dd7c/deployments/utils/deployUtils.ts#L83-L100
+[29]: https://docs.google.com/spreadsheets/d/1B00zmmBm0SLuYePNgeKTGvXzuRewQ6ymJfm0hQ2SUs4/edit#gid=1026270302
+[30]: https://github.com/SetProtocol/set-v2-deployments/blob/master/deployments/utils/outputHelper.ts
+[31]: https://github.com/SetProtocol/set-v2-deployments/blob/master/deployments/utils/deployUtils.ts
+[32]: https://github.com/SetProtocol/set-v2-deployments/blob/master/deployments/utils/dependencies.ts
 
 ## Etherscan verification
 
