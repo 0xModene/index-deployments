@@ -132,6 +132,8 @@ yarn deploy:kovan
 yarn etherscan:kovan
 ```
 
+[1]: https://github.com/ethereum/solidity/issues/9573
+
 ## Multisig Transaction Utilities
 
 #### `yarn tx`
