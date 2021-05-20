@@ -64,12 +64,12 @@ Create the new files you'll need by running the `create:deployment` command.
 This will generate files numbered for the latest stage in the deploy, deployments, and test folders.
 
 ```sh
-$ yarn create:deployment btc_rebalance_viewer
+$ yarn create:deployment btcfli_rebalance_viewer
 
 New deployment files at:
-> .../deploy/015_btc_rebalance_viewer.ts
-> .../deployments/constants/015_btc_rebalance_viewer.ts
-> .../test/deploys/015_btc_rebalance_viewer.ts
+> .../deploy/013_btcfli_rebalance_viewer.ts
+> .../deployments/constants/013_btcfli_rebalance_viewer.ts
+> .../test/deploys/013_btcfli_rebalance_viewer.spec.ts
 ```
 
 Then, find the **most recent** scripts and tests which are suitable templates for your deployment
