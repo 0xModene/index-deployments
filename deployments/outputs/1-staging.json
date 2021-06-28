@@ -3,7 +3,7 @@
     "network_key": "1-staging",
     "human_friendly_name": "main-net-staging",
     "network_id": 1,
-    "last_deployment_stage": 15
+    "last_deployment_stage": 20
   },
   "addresses": {
     "IndexToken": "0xd46ac82b7ebB77CCB5D4eaF053710aaf6567deF3",
@@ -27,10 +27,9 @@
     "RewardsFeb21MerkleDistributor": "0x7F4e7045EB88173fd28B71CBe43050a1fDF11737",
     "SupplyCapIssuanceHook": "0xbcceebd49857fa0986c892e7f0c283038ea674c4",
     "BaseManager": "0x64fe9141c8E407887535471815aF3D31B5E355D5",
-    "FlexibleLeverageStrategyAdapter - DEPRECATED": "0x21e71a0F8905868a6d840847b650df5fc2079b0b",
+    "FlexibleLeverageStrategyAdapter - DEPRECATED": "0xCD78aac04D234F1E08CcD858eF334d4748b75CdA",
     "FeeSplitAdapter": "0x19b8350EE78D7dC92CC41bEe1a8a6b633b3b5166",
-    "FlexibleLeverageStrategyAdapter": "0xCD78aac04D234F1E08CcD858eF334d4748b75CdA",
-    "Eth2xFLIRebalanceViewer": "0x8c127E10d30423852229aFE3bC07731DA6AFd5B6",
+    "Eth2xFLIRebalanceViewer - DEPRECATED": "0x8c127E10d30423852229aFE3bC07731DA6AFd5B6",
     "TREASURY_MULTI_SIG": "0xe3a1340Be2B4c8dE9E20ab185CfF37480521D9Af",
     "StakingRewardsV2 - ETHFLI": "0x84281Fc9FD9A49FE98744Fd924c165bD2299EeDB",
     "RewardsMar21MerkleDistributor": "0x086A512ae5B809f19D9CA546dbdf93F1E97F390e",
@@ -38,9 +37,25 @@
     "StakingRewardsV2 - MVI": "0x8713C184721F271a63cD7EC71511C7aa7f1FA07F",
     "BTCFLISupplyCapAllowedCallerIssuanceHook": "0x83CbE830872c2935fb33b9602717349b835471a1",
     "BTCFLIBaseManager": "0x4Dc35D4b650117bCE50c9C88eD9852Ce9E387c1d",
-    "BTCFlexibleLeverageStrategyAdapter": "0x2334Cb8f2C226Cce7Bcb2e41ee489Aa8bd6f2718",
+    "BTCFlexibleLeverageStrategyAdapter - DEPRECATED": "0x2334Cb8f2C226Cce7Bcb2e41ee489Aa8bd6f2718",
     "BTCFLIFeeSplitAdapter": "0xa57fba339E0fd36C0197A1e3125155fad2D1d1Ab",
-    "Btc2xFLIRebalanceViewer": "0xb5dC448667f2bA45b0c871859F99499F2bC5B9FA"
+    "OtcEscrow - 0x9fB64b232dEa3ba6e020F517b2BC8aFd0145880c": "0x6218E212531099f1dC243444593C573096102594",
+    "OtcEscrow - 0x4f3a120E72C76c22ae802D129F599BFDbc31cb81": "0xa7F21cB66A1e36B27361b9615FBd57D7d9153975",
+    "OtcEscrow - 0x9B5ea8C719e29A5bd0959FaF79C9E5c8206d0499": "0x89C1934CAF35eA0e0Ab3bE524CC950BB7F202198",
+    "OtcEscrow - 0xdD709cAE362972cb3B92DCeaD77127f7b8D58202": "0x9CC98433948083E71EDA0C10B93B52c8a477c9d7",
+    "OtcEscrow - 0x0A842c38fb93993bD6353a4afc784ccB99522359": "0xc74ab238564aCb6f581A13F25129f4D6c6dd9637",
+    "OtcEscrow - 0xbFC94A95d4448C802E848C68fdD2FC0fEE4a876E": "0xd4aC4C2f4E3433734B7d734E4452C0941bfD0c44",
+    "OtcEscrow - 0x70044278D556B0C962224e095397A52287C99cB5": "0x20b17E5E812234eeDB58C754F7B7b7DBaEc63339",
+    "OtcEscrow - 0xb2c9d26f10c36Ce43Ce46156e7833DFBA00A7276": "0x3EEA9fa6Df59496054ece39dC81006df7D7D5e7B",
+    "OtcEscrow - 0x578152463e01DE0FC1331250351dd6D11dAFD9b3": "0xEF961b4c87DC59cA22E87786EEE8324040936209",
+    "OtcEscrow - 0x719a363735dFa5023033640197359665072b8C0E": "0x4EF9BF50F73D43a6e9119A84dF9C2f168e91dFFB",
+    "RewardsMay21MerkleDistributor": "0x40e4F82Dc9Dd1A12eD3b469639Df787932578C25",
+    "IndexPowah": "0x69FB2243C137Af777D76E1556314D2585A5652A9",
+    "Btc2xFLIRebalanceViewer - DEPRECATED": "0xb5dC448667f2bA45b0c871859F99499F2bC5B9FA",
+    "FlexibleLeverageStrategyAdapter": "0x357680b12E815902B75C86cEC1eAc5d562b158E1",
+    "BTCFlexibleLeverageStrategyAdapter": "0x5724d4E452d473f7cB562A7401F2f77fD434Ea84",
+    "BaseManager - DPI": "0x2B0Ff8429A19708D609106981CC80900F8f6FC2f",
+    "GovernanceAdapter - DPI": "0x32393897E88aBeEF899F319a78D067099f2BFb1c"
   },
   "transactions": {
     "0": {
@@ -440,11 +455,6 @@
       "description": "Add adapter on BaseManager"
     },
     "52": {
-      "id": "0xfc7f14554f4bc1d35279294814391c6ebd99aa2108942614de2ed01ce0469642",
-      "timestamp": 1619566218370,
-      "description": "Add adapter on BaseManager"
-    },
-    "52": {
       "id": "0x595781b7802fcf65007bed931af08f2bf9b04c01629b1029e24728b92b9cf7bd",
       "name": "Btc2xFLIRebalanceViewer",
       "timestamp": 1619716339109,
@@ -457,6 +467,542 @@
         "0x4ddc2d193948926d02f9b1fe9e1daa0718270ed5"
       ],
       "libraries": {}
+    },
+    "53": {
+      "id": "0x1e6730d5a85d124674b6348314b206c3e6526d9d8b61b15b2519f1d63cef00eb",
+      "name": "OtcEscrow - 0x9fB64b232dEa3ba6e020F517b2BC8aFd0145880c",
+      "timestamp": 1623243463692,
+      "verified": true,
+      "description": "Deployed OtcEscrow",
+      "contractAddress": "0x6218E212531099f1dC243444593C573096102594",
+      "constructorArgs": [
+        "0x9fB64b232dEa3ba6e020F517b2BC8aFd0145880c",
+        "0x9467cfADC9DE245010dF95Ec6a585A506A8ad5FC",
+        1622185200,
+        1653721200,
+        1669276800,
+        {
+          "type": "BigNumber",
+          "hex": "0xe8d4a51000"
+        },
+        {
+          "type": "BigNumber",
+          "hex": "0x07efafbb410bb9d80000"
+        },
+        "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "0xd46ac82b7ebB77CCB5D4eaF053710aaf6567deF3"
+      ]
+    },
+    "54": {
+      "id": "0x1e442feed5792a68d10aa012f56b2d8647f6d8c9f8a67d6f6cfc351f31033815",
+      "name": "FlexibleLeverageStrategyAdapter",
+      "timestamp": 1622669048948,
+      "verified": false,
+      "description": "Deployed FlexibleLeverageStrategyAdapter",
+      "contractAddress": "0x357680b12E815902B75C86cEC1eAc5d562b158E1",
+      "constructorArgs": [
+        "0x64fe9141c8E407887535471815aF3D31B5E355D5",
+        {
+          "setToken": "0xDC11c313a28A68c6Fc4df718DD93f057849e8208",
+          "leverageModule": "0xdD668Fa631C0b3F863e3A830ca23Fe75100009e6",
+          "comptroller": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+          "targetCollateralCToken": "0x4ddc2d193948926d02f9b1fe9e1daa0718270ed5",
+          "targetBorrowCToken": "0x39aa39c021dfbae8fac545936693ac917d5e7563",
+          "collateralAsset": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+          "borrowAsset": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "collateralPriceOracle": "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419",
+          "borrowPriceOracle": "0x8fFfFfd4AfB6115b954Bd326cbe7B4BA576818f6",
+          "collateralDecimalAdjustment": {
+            "type": "BigNumber",
+            "hex": "0x0a"
+          },
+          "borrowDecimalAdjustment": {
+            "type": "BigNumber",
+            "hex": "0x16"
+          }
+        },
+        {
+          "targetLeverageRatio": {
+            "type": "BigNumber",
+            "hex": "0x1bc16d674ec80000"
+          },
+          "minLeverageRatio": {
+            "type": "BigNumber",
+            "hex": "0x17979cfe362a0000"
+          },
+          "maxLeverageRatio": {
+            "type": "BigNumber",
+            "hex": "0x1feb3dd067660000"
+          },
+          "recenteringSpeed": {
+            "type": "BigNumber",
+            "hex": "0xb1a2bc2ec50000"
+          },
+          "rebalanceInterval": {
+            "type": "BigNumber",
+            "hex": "0x015180"
+          }
+        },
+        {
+          "unutilizedLeveragePercentage": {
+            "type": "BigNumber",
+            "hex": "0x2386f26fc10000"
+          },
+          "twapMaxTradeSize": {
+            "type": "BigNumber",
+            "hex": "0x2086ac351052600000"
+          },
+          "twapCooldownPeriod": {
+            "type": "BigNumber",
+            "hex": "0x1e"
+          },
+          "slippageTolerance": {
+            "type": "BigNumber",
+            "hex": "0x470de4df820000"
+          },
+          "exchangeName": "SushiswapExchangeAdapter",
+          "leverExchangeData": "0x",
+          "deleverExchangeData": "0x"
+        },
+        {
+          "incentivizedTwapMaxTradeSize": {
+            "type": "BigNumber",
+            "hex": "0x410d586a20a4c00000"
+          },
+          "incentivizedTwapCooldownPeriod": {
+            "type": "BigNumber",
+            "hex": "0x01"
+          },
+          "incentivizedSlippageTolerance": {
+            "type": "BigNumber",
+            "hex": "0xb1a2bc2ec50000"
+          },
+          "etherReward": {
+            "type": "BigNumber",
+            "hex": "0x14d1120d7b160000"
+          },
+          "incentivizedLeverageRatio": {
+            "type": "BigNumber",
+            "hex": "0x257853b1dd8e0000"
+          }
+        }
+      ],
+      "libraries": {}
+    },
+    "55": {
+      "id": "0x46294e9375c51a7168439e77c2dae7ac1464b4044d3c3c2f4fda801fa830ae71",
+      "name": "OtcEscrow - 0x4f3a120E72C76c22ae802D129F599BFDbc31cb81",
+      "timestamp": 1623243540757,
+      "verified": true,
+      "description": "Deployed OtcEscrow",
+      "contractAddress": "0xa7F21cB66A1e36B27361b9615FBd57D7d9153975",
+      "constructorArgs": [
+        "0x4f3a120E72C76c22ae802D129F599BFDbc31cb81",
+        "0x9467cfADC9DE245010dF95Ec6a585A506A8ad5FC",
+        1622185200,
+        1653721200,
+        1669276800,
+        {
+          "type": "BigNumber",
+          "hex": "0x746a528800"
+        },
+        {
+          "type": "BigNumber",
+          "hex": "0x03f7d7dda085dcec0000"
+        },
+        "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "0xd46ac82b7ebB77CCB5D4eaF053710aaf6567deF3"
+      ],
+      "libraries": {}
+    },
+    "56": {
+      "id": "0xac7755e7b27f8135d7999f696225d4ac88b3d79b5b68ea191deb221af02e48a0",
+      "name": "OtcEscrow - 0x9B5ea8C719e29A5bd0959FaF79C9E5c8206d0499",
+      "timestamp": 1623243545952,
+      "verified": true,
+      "description": "Deployed OtcEscrow",
+      "contractAddress": "0x89C1934CAF35eA0e0Ab3bE524CC950BB7F202198",
+      "constructorArgs": [
+        "0x9B5ea8C719e29A5bd0959FaF79C9E5c8206d0499",
+        "0x9467cfADC9DE245010dF95Ec6a585A506A8ad5FC",
+        1622185200,
+        1653721200,
+        1669276800,
+        {
+          "type": "BigNumber",
+          "hex": "0xae9f7bcc00"
+        },
+        {
+          "type": "BigNumber",
+          "hex": "0x05f3bcdc156ef7b00000"
+        },
+        "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "0xd46ac82b7ebB77CCB5D4eaF053710aaf6567deF3"
+      ]
+    },
+    "57": {
+      "id": "0xdb8191c9691e68c5db3c6217765a8e304e67adb75828fac168bdec5861e367f2",
+      "timestamp": 1622669848806,
+      "description": "Add adapter on BaseManager"
+    },
+    "58": {
+      "id": "0x6be50117df9b8a050a3883f0b7f36c6798ec02deeb6ced7b549a3dae10150893",
+      "name": "BTCFlexibleLeverageStrategyAdapter",
+      "timestamp": 1622670197076,
+      "verified": true,
+      "description": "Deployed BTC FlexibleLeverageStrategyAdapter",
+      "contractAddress": "0x5724d4E452d473f7cB562A7401F2f77fD434Ea84",
+      "constructorArgs": [
+        "0x4Dc35D4b650117bCE50c9C88eD9852Ce9E387c1d",
+        {
+          "setToken": "0x2fa6ffC08F30866B4f6eC56f31f4E31b4bB91ADa",
+          "leverageModule": "0xdD668Fa631C0b3F863e3A830ca23Fe75100009e6",
+          "comptroller": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+          "targetCollateralCToken": "0xccf4429db6322d5c611ee964527d42e5d685dd6a",
+          "targetBorrowCToken": "0x39aa39c021dfbae8fac545936693ac917d5e7563",
+          "collateralAsset": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+          "borrowAsset": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "collateralPriceOracle": "0xF4030086522a5bEEa4988F8cA5B36dbC97BeE88c",
+          "borrowPriceOracle": "0x8fFfFfd4AfB6115b954Bd326cbe7B4BA576818f6",
+          "collateralDecimalAdjustment": {
+            "type": "BigNumber",
+            "hex": "0x14"
+          },
+          "borrowDecimalAdjustment": {
+            "type": "BigNumber",
+            "hex": "0x16"
+          }
+        },
+        {
+          "targetLeverageRatio": {
+            "type": "BigNumber",
+            "hex": "0x1bc16d674ec80000"
+          },
+          "minLeverageRatio": {
+            "type": "BigNumber",
+            "hex": "0x18fae27693b40000"
+          },
+          "maxLeverageRatio": {
+            "type": "BigNumber",
+            "hex": "0x1e87f85809dc0000"
+          },
+          "recenteringSpeed": {
+            "type": "BigNumber",
+            "hex": "0x016345785d8a0000"
+          },
+          "rebalanceInterval": {
+            "type": "BigNumber",
+            "hex": "0x015180"
+          }
+        },
+        {
+          "unutilizedLeveragePercentage": {
+            "type": "BigNumber",
+            "hex": "0x2386f26fc10000"
+          },
+          "twapMaxTradeSize": {
+            "type": "BigNumber",
+            "hex": "0x77359400"
+          },
+          "twapCooldownPeriod": {
+            "type": "BigNumber",
+            "hex": "0x1e"
+          },
+          "slippageTolerance": {
+            "type": "BigNumber",
+            "hex": "0x470de4df820000"
+          },
+          "exchangeName": "SushiswapExchangeAdapter",
+          "leverExchangeData": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000003000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc20000000000000000000000002260fac5e5542a773aa44fbcfedf7c193bc2c599",
+          "deleverExchangeData": "0x000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000030000000000000000000000002260fac5e5542a773aa44fbcfedf7c193bc2c599000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+        },
+        {
+          "incentivizedTwapMaxTradeSize": {
+            "type": "BigNumber",
+            "hex": "0xee6b2800"
+          },
+          "incentivizedTwapCooldownPeriod": {
+            "type": "BigNumber",
+            "hex": "0x01"
+          },
+          "incentivizedSlippageTolerance": {
+            "type": "BigNumber",
+            "hex": "0xb1a2bc2ec50000"
+          },
+          "etherReward": {
+            "type": "BigNumber",
+            "hex": "0x0de0b6b3a7640000"
+          },
+          "incentivizedLeverageRatio": {
+            "type": "BigNumber",
+            "hex": "0x214e8348c4f00000"
+          }
+        }
+      ],
+      "libraries": {}
+    },
+    "59": {
+      "id": "0x0fde564645ba9f24c05b042a15fc057560c903a6ac42e56d166b3d0368604887",
+      "name": "OtcEscrow - 0xdD709cAE362972cb3B92DCeaD77127f7b8D58202",
+      "timestamp": 1623243551226,
+      "verified": true,
+      "description": "Deployed OtcEscrow",
+      "contractAddress": "0x9CC98433948083E71EDA0C10B93B52c8a477c9d7",
+      "constructorArgs": [
+        "0xdD709cAE362972cb3B92DCeaD77127f7b8D58202",
+        "0x9467cfADC9DE245010dF95Ec6a585A506A8ad5FC",
+        1622185200,
+        1653721200,
+        1669276800,
+        {
+          "type": "BigNumber",
+          "hex": "0xae9f7bcc00"
+        },
+        {
+          "type": "BigNumber",
+          "hex": "0x05f3bcdc156ef7b00000"
+        },
+        "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "0xd46ac82b7ebB77CCB5D4eaF053710aaf6567deF3"
+      ],
+      "libraries": {}
+    },
+    "60": {
+      "id": "0x12a489b4dc58724573b2b8651ffa5feb08d138c474e4fdfb3290124214d78113",
+      "name": "OtcEscrow - 0x0A842c38fb93993bD6353a4afc784ccB99522359",
+      "timestamp": 1623243560711,
+      "verified": true,
+      "description": "Deployed OtcEscrow",
+      "contractAddress": "0xc74ab238564aCb6f581A13F25129f4D6c6dd9637",
+      "constructorArgs": [
+        "0x0A842c38fb93993bD6353a4afc784ccB99522359",
+        "0x9467cfADC9DE245010dF95Ec6a585A506A8ad5FC",
+        1622185200,
+        1653721200,
+        1669276800,
+        {
+          "type": "BigNumber",
+          "hex": "0x746a528800"
+        },
+        {
+          "type": "BigNumber",
+          "hex": "0x03f7d7dda085dcec0000"
+        },
+        "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "0xd46ac82b7ebB77CCB5D4eaF053710aaf6567deF3"
+      ],
+      "libraries": {}
+    },
+    "61": {
+      "id": "0xa508d6a8d3fe35f0bf0846e0f3f8340d92712ae191669f35cc1deb38592f533f",
+      "name": "OtcEscrow - 0xbFC94A95d4448C802E848C68fdD2FC0fEE4a876E",
+      "timestamp": 1623243570248,
+      "verified": true,
+      "description": "Deployed OtcEscrow",
+      "contractAddress": "0xd4aC4C2f4E3433734B7d734E4452C0941bfD0c44",
+      "constructorArgs": [
+        "0xbFC94A95d4448C802E848C68fdD2FC0fEE4a876E",
+        "0x9467cfADC9DE245010dF95Ec6a585A506A8ad5FC",
+        1622185200,
+        1653721200,
+        1669276800,
+        {
+          "type": "BigNumber",
+          "hex": "0x45d964b800"
+        },
+        {
+          "type": "BigNumber",
+          "hex": "0x02617bf7e40874cc0000"
+        },
+        "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "0xd46ac82b7ebB77CCB5D4eaF053710aaf6567deF3"
+      ],
+      "libraries": {}
+    },
+    "62": {
+      "id": "0x95b26b4e79ddfde90c0f27e713be475f793abbf69c5ebba4bd1643ec575f6c5b",
+      "name": "OtcEscrow - 0x70044278D556B0C962224e095397A52287C99cB5",
+      "timestamp": 1623243583532,
+      "verified": true,
+      "description": "Deployed OtcEscrow",
+      "contractAddress": "0x20b17E5E812234eeDB58C754F7B7b7DBaEc63339",
+      "constructorArgs": [
+        "0x70044278D556B0C962224e095397A52287C99cB5",
+        "0x9467cfADC9DE245010dF95Ec6a585A506A8ad5FC",
+        1622185200,
+        1653721200,
+        1669276800,
+        {
+          "type": "BigNumber",
+          "hex": "0x025d5c139000"
+        },
+        {
+          "type": "BigNumber",
+          "hex": "0x14a27327b78fac100000"
+        },
+        "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "0xd46ac82b7ebB77CCB5D4eaF053710aaf6567deF3"
+      ],
+      "libraries": {}
+    },
+    "63": {
+      "id": "0xaccda6795a15c72644ff5df0ed9feef8f1161b7c8706db21c9bd2a44763d8d62",
+      "name": "OtcEscrow - 0xb2c9d26f10c36Ce43Ce46156e7833DFBA00A7276",
+      "timestamp": 1623243670390,
+      "verified": true,
+      "description": "Deployed OtcEscrow",
+      "contractAddress": "0x3EEA9fa6Df59496054ece39dC81006df7D7D5e7B",
+      "constructorArgs": [
+        "0xb2c9d26f10c36Ce43Ce46156e7833DFBA00A7276",
+        "0x9467cfADC9DE245010dF95Ec6a585A506A8ad5FC",
+        1622185200,
+        1653721200,
+        1669276800,
+        {
+          "type": "BigNumber",
+          "hex": "0x2e90edd000"
+        },
+        {
+          "type": "BigNumber",
+          "hex": "0x01964e0505c9c0bc0000"
+        },
+        "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "0xd46ac82b7ebB77CCB5D4eaF053710aaf6567deF3"
+      ],
+      "libraries": {}
+    },
+    "64": {
+      "id": "0x4ee97dbf296b87ce6b0d301abca4e91a38cc59c8e178951f5a2a6d71db6db075",
+      "name": "OtcEscrow - 0x578152463e01DE0FC1331250351dd6D11dAFD9b3",
+      "timestamp": 1623243679603,
+      "verified": true,
+      "description": "Deployed OtcEscrow",
+      "contractAddress": "0xEF961b4c87DC59cA22E87786EEE8324040936209",
+      "constructorArgs": [
+        "0x578152463e01DE0FC1331250351dd6D11dAFD9b3",
+        "0x9467cfADC9DE245010dF95Ec6a585A506A8ad5FC",
+        1622185200,
+        1653721200,
+        1669276800,
+        {
+          "type": "BigNumber",
+          "hex": "0x174876e800"
+        },
+        {
+          "type": "BigNumber",
+          "hex": "0xcb2012278b0cac0000"
+        },
+        "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "0xd46ac82b7ebB77CCB5D4eaF053710aaf6567deF3"
+      ],
+      "libraries": {}
+    },
+    "65": {
+      "id": "0x88ab1539afd15ef99c445d0ac9c16e4770d84214fe4eff799aea68221e356d96",
+      "name": "OtcEscrow - 0x719a363735dFa5023033640197359665072b8C0E",
+      "timestamp": 1623243700906,
+      "verified": true,
+      "description": "Deployed OtcEscrow",
+      "contractAddress": "0x4EF9BF50F73D43a6e9119A84dF9C2f168e91dFFB",
+      "constructorArgs": [
+        "0x719a363735dFa5023033640197359665072b8C0E",
+        "0x9467cfADC9DE245010dF95Ec6a585A506A8ad5FC",
+        1622185200,
+        1653721200,
+        1669276800,
+        {
+          "type": "BigNumber",
+          "hex": "0x746a528800"
+        },
+        {
+          "type": "BigNumber",
+          "hex": "0x03f7d7dda085dcec0000"
+        },
+        "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "0xd46ac82b7ebB77CCB5D4eaF053710aaf6567deF3"
+      ],
+      "libraries": {}
+    },
+    "66": {
+      "id": "0xef24f738ae0840eed52f343c1bb9d2b509daf0f058722a918d2d67ed5fffd626",
+      "name": "RewardsMay21MerkleDistributor",
+      "timestamp": 1623243711633,
+      "verified": true,
+      "description": "Deployed RewardsMay21MerkleDistributor",
+      "contractAddress": "0x40e4F82Dc9Dd1A12eD3b469639Df787932578C25",
+      "constructorArgs": [
+        "0xd46ac82b7ebB77CCB5D4eaF053710aaf6567deF3",
+        "0x92b11e89f00e1c7fe75a4236766401d86e826593bd77da32181b80242dbeb36c"
+      ],
+      "libraries": {}
+    },
+    "67": {
+      "id": "0x4bc645e615d6ddc309acea2e45024eff586aca0ea2920af6216a1f23709c47fd",
+      "name": "IndexPowah",
+      "timestamp": 1623449381468,
+      "verified": true,
+      "description": "Deployed IndexPowah",
+      "contractAddress": "0x69FB2243C137Af777D76E1556314D2585A5652A9",
+      "constructorArgs": [
+        "0xe3a1340Be2B4c8dE9E20ab185CfF37480521D9Af",
+        "0xd46ac82b7ebB77CCB5D4eaF053710aaf6567deF3",
+        "0x3452a7f30a712e415a0674c0341d44ee9d9786f9",
+        "0xA73DF646512C82550C2b3C0324c4EEdEE53b400C",
+        "0xc2EdaD668740f1aA35E4D8f227fB8E17dcA888Cd",
+        75,
+        [
+          "0x1D72f38A40DC105a4eCE1c0880eF558055552D68",
+          "0x8713C184721F271a63cD7EC71511C7aa7f1FA07F"
+        ],
+        [
+          "0x1df4564A96aAc2B6633F1ce2f3092a11e57F6c19",
+          "0x0e800B09cBC50e2CCbb01C6A833c56Ef692F3e3E",
+          "0x2f3a28DF7f031695c52C680A4f9888D947d666B4",
+          "0x55c316DEA64D0B6CE20eAb843c821a10E3bdb91B",
+          "0xec5bc904ABb557781b16435E344a59D2218a6E17",
+          "0x7B15bB785167c610020B52bf4B790396D73bf8a0",
+          "0x7833Ba760D9FE0085E39c490f5A8c66565770cA5",
+          "0x3955ebF597154bD93d1Bf9b66BC571FeA3050c38"
+        ]
+      ],
+      "libraries": {}
+    },
+    "68": {
+      "id": "0xebcb2baa2128c8dddb7f65865db3cd2d816292f313c8ec32d07db3f161aff832",
+      "timestamp": 1622670268119,
+      "description": "Add adapter on BaseManager"
+    },
+    "69": {
+      "id": "0x0a958f1af6090f4aadc3d8ed8d3781be26afcd3af65aa5977a18eeb4c59c3650",
+      "name": "BaseManager - DPI",
+      "timestamp": 1624561582949,
+      "verified": true,
+      "description": "Deployed BaseManager - DPI",
+      "contractAddress": "0x2B0Ff8429A19708D609106981CC80900F8f6FC2f",
+      "constructorArgs": [
+        "0x73BAA8A41ddA1Cbcae8C7709A2A7B171182A1D46",
+        "0x69Bdb276A17Dd90F9D3A545944CCB20E593ae8E3",
+        "0x69Bdb276A17Dd90F9D3A545944CCB20E593ae8E3"
+      ],
+      "libraries": {}
+    },
+    "70": {
+      "id": "0x9e409aa995c2961b57f745e0db030a226a76bd33030d0ea54b5b3e5c8adca6a5",
+      "name": "GovernanceAdapter - DPI",
+      "timestamp": 1624561603013,
+      "verified": true,
+      "description": "Deployed GovernanceAdapter - DPI",
+      "contractAddress": "0x32393897E88aBeEF899F319a78D067099f2BFb1c",
+      "constructorArgs": [
+        "0x2B0Ff8429A19708D609106981CC80900F8f6FC2f",
+        "0x2944B59B2214eE6d3649Ca53A0648F6548B94F86"
+      ],
+      "libraries": {}
+    },
+    "71": {
+      "id": "0xb8ccf88a8924a45c71c2e1b11c38dc3cb1d83fd09d515a13bfdf265366cd0d77",
+      "timestamp": 1624561611930,
+      "description": "Add GovernanceAdapter - DPI on BaseManager - DPI"
     }
   }
 }
